@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=Bilt
+Comment= BILT P2P Cryptocurrency
+Comment[fr]= BILT, monnaie virtuelle cryptographique pair à pair
+Comment[tr]= BILT, eşten eşe kriptografik sanal para birimi
+Exec=bilt-qt %u
+Terminal=false
+Type=Application
+Icon=pivx128
+MimeType=x-scheme-handler/pivx;
+Categories=Office;Finance;
+StartupWMClass=Bilt-qt

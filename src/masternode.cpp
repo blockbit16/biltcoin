@@ -334,7 +334,8 @@ CAmount CMasternode::GetMasternodeNodeCollateral(int nHeight)
     if(nHeight >  200000) return 15000 * COIN;
     if(nHeight >  100000) return 10000 * COIN;
     if(nHeight >   10000) return  5000 * COIN;
-
+	if(nHeight >     100) return  1000 * COIN;
+	
     return 0;
 }
 

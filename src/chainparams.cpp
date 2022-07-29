@@ -69,14 +69,14 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits
  */
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256S("0x0"))
+    (1, uint256S("00000027f860cef8a7855824d41ce430a35d13035968b66a2b85bfcb8c96b3e7"))
 ;
 
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1642468185, // * UNIX timestamp of last checkpoint block
-    0,   // * total number of transactions between genesis and last checkpoint
+    1659022145, // * UNIX timestamp of last checkpoint block
+    2,   // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the UpdateTip debug.log lines)
     2820        // * estimated number of transactions per day after checkpoint
 };
@@ -170,40 +170,40 @@ public:
         // Network upgrades
         consensus.vUpgrades[Consensus::BASE_NETWORK].nActivationHeight                   = Consensus::NetworkUpgrade::ALWAYS_ACTIVE;
         consensus.vUpgrades[Consensus::UPGRADE_TESTDUMMY].nActivationHeight              = Consensus::NetworkUpgrade::NO_ACTIVATION_HEIGHT;
-        consensus.vUpgrades[Consensus::UPGRADE_POS].nActivationHeight                    = 501;
+        consensus.vUpgrades[Consensus::UPGRADE_POS].nActivationHeight                    = 599;
         consensus.vUpgrades[Consensus::UPGRADE_POS_V2].nActivationHeight                 = 601;
         consensus.vUpgrades[Consensus::UPGRADE_ZC].nActivationHeight                     = Consensus::NetworkUpgrade::NO_ACTIVATION_HEIGHT;
         consensus.vUpgrades[Consensus::UPGRADE_ZC_V2].nActivationHeight                  = Consensus::NetworkUpgrade::NO_ACTIVATION_HEIGHT;
-        consensus.vUpgrades[Consensus::UPGRADE_BIP65].nActivationHeight                  = 611;
+        consensus.vUpgrades[Consensus::UPGRADE_BIP65].nActivationHeight                  = 601;
         consensus.vUpgrades[Consensus::UPGRADE_ZC_PUBLIC].nActivationHeight              = Consensus::NetworkUpgrade::NO_ACTIVATION_HEIGHT;
-        consensus.vUpgrades[Consensus::UPGRADE_STAKE_MIN_DEPTH_V1].nActivationHeight     = 901;
-        consensus.vUpgrades[Consensus::UPGRADE_STAKE_MODIFIER_V2].nActivationHeight      = 921;
-        consensus.vUpgrades[Consensus::UPGRADE_TIME_PROTOCOL_V2].nActivationHeight       = 931;
-        consensus.vUpgrades[Consensus::UPGRADE_P2PKH_BLOCK_SIGNATURES].nActivationHeight = 941;
-        consensus.vUpgrades[Consensus::UPGRADE_STAKE_MIN_DEPTH_V2].nActivationHeight     = 951;
-        consensus.vUpgrades[Consensus::UPGRADE_CHECK_WORK_V2].nActivationHeight          = 1001;
-        consensus.vUpgrades[Consensus::UPGRADE_MASTERNODE_RANK_V2].nActivationHeight     = 1101;
+        consensus.vUpgrades[Consensus::UPGRADE_STAKE_MIN_DEPTH_V1].nActivationHeight     = 600;
+        consensus.vUpgrades[Consensus::UPGRADE_STAKE_MODIFIER_V2].nActivationHeight      = 611;
+        consensus.vUpgrades[Consensus::UPGRADE_TIME_PROTOCOL_V2].nActivationHeight       = 621;
+        consensus.vUpgrades[Consensus::UPGRADE_P2PKH_BLOCK_SIGNATURES].nActivationHeight = 631;
+        consensus.vUpgrades[Consensus::UPGRADE_STAKE_MIN_DEPTH_V2].nActivationHeight     = 641;
+        consensus.vUpgrades[Consensus::UPGRADE_CHECK_WORK_V2].nActivationHeight          = 651;
+        consensus.vUpgrades[Consensus::UPGRADE_MASTERNODE_RANK_V2].nActivationHeight     = 661;
 
-        consensus.vUpgrades[Consensus::UPGRADE_POS].hashActivationBlock                    = uint256S("0x0");
-        consensus.vUpgrades[Consensus::UPGRADE_POS_V2].hashActivationBlock                 = uint256S("0x0");
-        consensus.vUpgrades[Consensus::UPGRADE_BIP65].hashActivationBlock                  = uint256S("0x0");
-        consensus.vUpgrades[Consensus::UPGRADE_STAKE_MIN_DEPTH_V1].hashActivationBlock     = uint256S("0x0");
-        consensus.vUpgrades[Consensus::UPGRADE_STAKE_MODIFIER_V2].hashActivationBlock      = uint256S("0x0");
-        consensus.vUpgrades[Consensus::UPGRADE_TIME_PROTOCOL_V2].hashActivationBlock       = uint256S("0x0");
-        consensus.vUpgrades[Consensus::UPGRADE_P2PKH_BLOCK_SIGNATURES].hashActivationBlock = uint256S("0x0");
-        consensus.vUpgrades[Consensus::UPGRADE_STAKE_MIN_DEPTH_V2].hashActivationBlock     = uint256S("0x0");
-        consensus.vUpgrades[Consensus::UPGRADE_CHECK_WORK_V2].hashActivationBlock          = uint256S("0x0");
-        consensus.vUpgrades[Consensus::UPGRADE_MASTERNODE_RANK_V2].hashActivationBlock     = uint256S("0x0");
+        consensus.vUpgrades[Consensus::UPGRADE_POS].hashActivationBlock                    = uint256S("0x3add156ab2702d6356dd5f15763ed06bb61ef20bdec7a1c4ff7d6bb2c7f7e7ee");
+        consensus.vUpgrades[Consensus::UPGRADE_POS_V2].hashActivationBlock                 = uint256S("0x25daa59a377a036a0bd4dafacb53fa0135d57c77c33c9713dd47f15dcebbfae3");
+        consensus.vUpgrades[Consensus::UPGRADE_BIP65].hashActivationBlock                  = uint256S("0x25daa59a377a036a0bd4dafacb53fa0135d57c77c33c9713dd47f15dcebbfae3");
+        consensus.vUpgrades[Consensus::UPGRADE_STAKE_MIN_DEPTH_V1].hashActivationBlock     = uint256S("0xb4b891a51ceb80ab0eb403fbe4b1897d7a1f996415a44edb3f6b19c2073acf4d");
+        consensus.vUpgrades[Consensus::UPGRADE_STAKE_MODIFIER_V2].hashActivationBlock      = uint256S("0xe0dbbc7d997e24bd62050776a6058ed96fd8d7d124a089e024354980a769de73");
+        consensus.vUpgrades[Consensus::UPGRADE_TIME_PROTOCOL_V2].hashActivationBlock       = uint256S("0x67c9707bfc3c7cee5a2b167029f163a7b5f0ddfeefe0c2555e111599f063affa");
+        consensus.vUpgrades[Consensus::UPGRADE_P2PKH_BLOCK_SIGNATURES].hashActivationBlock = uint256S("0xb4d7e6563d47588e7617fd1cd45e813b53e28c3f24cd545723500cd72bdf592b");
+        consensus.vUpgrades[Consensus::UPGRADE_STAKE_MIN_DEPTH_V2].hashActivationBlock     = uint256S("0x2e906a2cf72c589ac4fe557d52396fd88e0d83f542f371072e0938c3d45de429");
+        consensus.vUpgrades[Consensus::UPGRADE_CHECK_WORK_V2].hashActivationBlock          = uint256S("0xfc6c7aa3512957b46a0d45c486cf436ecebd961a17d1d19befe5716d2ce23068");
+        consensus.vUpgrades[Consensus::UPGRADE_MASTERNODE_RANK_V2].hashActivationBlock     = uint256S("0xd773d84946ee5478ee5a05ed7ada90c441cf74025525c8cb1c9e9013c59426e0");
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 4-byte int at any alignment.
          */
-        pchMessageStart[0] = 0x22;
-        pchMessageStart[1] = 0xc1;
-        pchMessageStart[2] = 0x4d;
-        pchMessageStart[3] = 0x67;
+        pchMessageStart[0] = 0x71;
+        pchMessageStart[1] = 0x8d;
+        pchMessageStart[2] = 0x9c;
+        pchMessageStart[3] = 0xab;
         nDefaultPort = 45328;
 
         // Note that of those with the service bits flag, most only support a subset of possible options
@@ -211,6 +211,8 @@ public:
         vSeeds.emplace_back(CDNSSeedData("seed2",  "156.67.210.33", true));
         vSeeds.emplace_back(CDNSSeedData("seed3",  "194.5.157.58", true));
         vSeeds.emplace_back(CDNSSeedData("seed4",  "153.92.208.113", true));
+        vSeeds.emplace_back(CDNSSeedData("seed5",  "45.147.228.120", true));
+        vSeeds.emplace_back(CDNSSeedData("seed4",  "64.44.102.98", true));
 
         base58Prefixes[PUBKEY_ADDRESS]  = std::vector<unsigned char>(1, 25);
         base58Prefixes[SCRIPT_ADDRESS]  = std::vector<unsigned char>(1, 85);
